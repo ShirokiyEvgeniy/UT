@@ -12,5 +12,4 @@ public class Main {
         System.out.println(tr.getMessage());
         System.out.println(tr.detectTriangle());
     }
-
 }
