@@ -7,7 +7,6 @@ public class Triangle {
     final int TR_ORDYNARY = 4;    // обычный
     final int TR_RECTANGULAR = 8; // прямоугольный
 
-
     private double a;
     private double b;
     private double c;
