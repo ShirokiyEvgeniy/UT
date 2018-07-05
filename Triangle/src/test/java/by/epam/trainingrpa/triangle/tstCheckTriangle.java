@@ -6,6 +6,27 @@ import org.testng.annotations.Test;
 
 public class tstCheckTriangle {
 
+    @DataProvider(name = "dataProviderForSides")
+    public Object[][] dataForSides() {
+        return new Object[][]
+                {
+                        {4.0, 2.0, 0.0},
+                        {0.0, 4.0, 2.0},
+                        {2.0, 0.0, 4.0},
+                        {5.0, 5.0, 10.0}
+                };
+    }
+
+    @DataProvider(name = "dataProviderForRightSides")
+    public Object[][] dataForRightSides() {
+        return new Object[][]
+                {
+                        {3.0, 4.0, 5.0},
+                        {5.0, 5.0, 9.99},
+                        {4.99, 4.99, 4.99}
+                };
+    }
+
     @Test
     public void tstSideCLessThan0() {
         Triangle tr = new Triangle(2.0, 2.0, 0.0);
@@ -27,31 +48,10 @@ public class tstCheckTriangle {
         Assert.assertEquals(tr.getMessage(),"a<=0");
     }
 
-    @DataProvider(name = "dataProviderForSides")
-    public Object[][] dataForSides() {
-        return new Object[][]
-                {
-                        {4.0, 2.0, 0.0},
-                        {0.0, 4.0, 2.0},
-                        {2.0, 0.0, 4.0},
-                        {5.0, 5.0, 10.0}
-                };
-    }
-
     @Test(dataProvider = "dataProviderForSides")
     public void tstIrregularTriangles(double a, double b, double c) {
         Triangle tr = new Triangle(a, b, c);
         Assert.assertFalse(tr.checkTriangle());
-    }
-
-    @DataProvider(name = "dataProviderForRightSides")
-    public Object[][] dataForRightSides() {
-        return new Object[][]
-                {
-                        {3.0, 4.0, 5.0},
-                        {5.0, 5.0, 9.99},
-                        {4.99, 4.99, 4.99}
-                };
     }
 
     @Test(dataProvider = "dataProviderForRightSides")

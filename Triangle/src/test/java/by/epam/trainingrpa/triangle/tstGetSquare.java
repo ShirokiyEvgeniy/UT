@@ -16,6 +16,15 @@ public class tstGetSquare {
                 };
     }
 
+    @DataProvider(name = "dataProviderForNaN")
+    public Object[][] dataForNaN() {
+        return new Object[][]
+                {
+                        {4.0, 5.0, -10.0},
+                        {0.3, 0.4, 0.1}
+                };
+    }
+
     @Test
     public void tstRegularCheck1() {
         Triangle tr = new Triangle(3.0, 4.0, 5.0);
@@ -32,15 +41,6 @@ public class tstGetSquare {
     public void tstRegularCheck3() {
         Triangle tr = new Triangle(0.6, 0.8, 1.0);
         Assert.assertEquals(tr.getSquare(), 0.24);
-    }
-
-    @DataProvider(name = "dataProviderForNaN")
-    public Object[][] dataForNaN() {
-        return new Object[][]
-                {
-                        {4.0, 5.0, -10.0},
-                        {0.3, 0.4, 0.1}
-                };
     }
 
     @Test(dataProvider = "dataProviderForNaN")
