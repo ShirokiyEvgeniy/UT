@@ -48,9 +48,9 @@ public class tstCheckTriangle {
     public Object[][] dataForRightSides() {
         return new Object[][]
                 {
-                        {5.0, 10.0 - Math.pow(10.0, -20.0), 5.0},
                         {3.0, 4.0, 5.0},
-                        {5.0, 5.0, 9.99}
+                        {5.0, 5.0, 9.99},
+                        {4.99, 4.99, 4.99}
                 };
     }
 
