@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="MainSuite" parallel="false">
+    <test name="CheckTriangle">
+        <classes>
+            <class name="by.epam.trainingrpa.triangle.tstCheckTriangle"/>
+        </classes>
+    </test>
+    <test name="DetectTriangle">
+        <classes>
+            <class name="by.epam.trainingrpa.triangle.tstDetectTriangle"/>
+        </classes>
+    </test>
+    <test name="GetSquare">
+        <classes>
+            <class name="by.epam.trainingrpa.triangle.tstGetSquare"/>
+        </classes>
+    </test>
+</suite>

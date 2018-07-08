@@ -13,7 +13,6 @@ public class tstDetectTriangle {
                         {3.0, 4.0, 5.0},
                         {4.0, 5.0, 3.0},
                         {5.0, 3.0, 4.0},
-                        {3.0 * Double.MAX_VALUE, 4.0 * Double.MAX_VALUE, 5.0 * Double.MAX_VALUE},
                         {0.6 * Double.MAX_VALUE, 0.8 * Double.MAX_VALUE, Double.MAX_VALUE},
                         {3.0 * Math.pow(10.0, -100.0), 4.0 * Math.pow(10.0, -100.0), 5.0 * Math.pow(10.0, -100.0)},
                         {4.0, 4.0, 4.0 * Math.sqrt(2.0)},
